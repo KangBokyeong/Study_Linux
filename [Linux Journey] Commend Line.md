@@ -1,4 +1,4 @@
-# [Linux Journey] Commend Line
+# [Linux Journey] Command Line
 ## pwd(print working directory)
 - 현재 어떤 디렉토리에 위치해 있는지 확인 시 사용
 ### 사용 예
