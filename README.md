@@ -18,7 +18,7 @@
 - Process Utilization
 - Logging
 
-### [Networking Nomad]()
+### [Networking Nomad](https://github.com/KangBokyeong/Study_Linux/tree/master/Networking%20Nomad)
 - Network Sharing
 - Network Basics
 - Subnetting
