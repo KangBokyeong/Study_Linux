@@ -9,7 +9,7 @@
 - Processes
 - Packages
 
-### Journeyman
+### [Journeyman](https://github.com/KangBokyeong/Study_Linux/tree/master/Journeyman)
 - Devices
 - The Filesystem
 - Boot the System
@@ -18,7 +18,7 @@
 - Process Utilization
 - Logging
 
-### Networking Nomad
+### [Networking Nomad]()
 - Network Sharing
 - Network Basics
 - Subnetting
