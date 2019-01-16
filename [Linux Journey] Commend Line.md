@@ -36,9 +36,8 @@
 
 
 ## file
-- 파일 타입 찾을 시 사용
-### 사용 예
-- 사용법은 아직 공부중...
+- [자세한 사용법 및 정의는 여기서](https://korbillgates.tistory.com/161)
+
 ## cat
-- [여기 자세한 사용법 및 정의가 잘 나와 있음.] (http://www.incodom.kr/Linux/%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%B9%EC%96%B4/cat)
+- [여기 자세한 사용법 및 정의가 잘 나와 있음.](http://www.incodom.kr/Linux/%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%B9%EC%96%B4/cat)
 
