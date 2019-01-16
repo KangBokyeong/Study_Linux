@@ -1,6 +1,6 @@
 # Study Linux
 ## Linux Journey 단계 별 학습
-### Grasshoper
+### [Grasshoper](https://github.com/KangBokyeong/Study_Linux/tree/master/Grasshoper)
 - [Command Line](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%5D%20Command%20Line.md)
 - Text-Fu
 - Advanced Text-Fu
