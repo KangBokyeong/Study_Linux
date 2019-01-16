@@ -68,9 +68,6 @@
 | cp -r |디렉토리 복사, 디렉토리 안에 있는 디렉토리들과 파일을 복사|
 | cp -i |덮어쓰기, i(: interactive)|
 
-### 사용 예
-- (나중에 사용해 보며 첨부해 놓기)
-
 ## mv(move)
 - 파일명, 디렉토리명 바꾸기
 - 파일 다른 곳에 옮기기(하나 이상도 가능)
@@ -80,9 +77,6 @@
 | mv |위에 정리한 내용의 기능을 함(일반적으로)|
 | mv -i |cp와 마찬가지로 덮어 쓸 때 사용|
 | mv -b |이전의 이름으로 백업|
-
-### 사용 예
-- (나중에 사용해 보며 첨부해 놓기)
 
 ## mkdir(make directory)
 - 현재 존재하지 않는 디렉토리 생성
@@ -94,7 +88,7 @@
 | mkdir -p |하위 디렉토리까지 생성 하는데 사용|
 
 ### 사용 예
-- (나중에 사용해 보며 첨부해 놓기)
+<img src="https://user-images.githubusercontent.com/44868847/51252187-88332c80-19de-11e9-9b45-90a21dc8aa8b.PNG" width="60%">
 
 ## rm(remove)
 - 파일이나 디렉토리 삭제
@@ -107,7 +101,7 @@
 | rmdir | 디렉토리 삭제 시 사용|
 
 ### 사용 예
-- (나중에 사용해 보며 첨부해 놓기)
+<img src="https://user-images.githubusercontent.com/44868847/51252183-85d0d280-19de-11e9-8a05-7e31120e209d.PNG" width="60%">
 
 ## find
 - 파일, 디렉토리 등 검색
@@ -121,25 +115,27 @@
 |-type -name|타입과 폴더명으로 검색하고자 할 때 사용|
 
 ### 사용 예
-- (나중에 사용해 보며 첨부해 놓기)
+<img src="https://user-images.githubusercontent.com/44868847/51252190-89645980-19de-11e9-8fca-851cccaea26f.PNG" width="60%">
 
 ## help
 - 도움말 출력
 
 ### 사용 예
-- (나중에 사용해 보며 첨부해 놓기)
+<img src="https://user-images.githubusercontent.com/44868847/51252201-9123fe00-19de-11e9-838d-8d39564fcf1a.PNG" width="60%">
+<img src="https://user-images.githubusercontent.com/44868847/51252203-92edc180-19de-11e9-9736-566d7069d9f2.PNG" width="60%">
 
 ## man
 - 메뉴얼 출력
 
 ### 사용 예
-- (나중에 사용해 보며 첨부해 놓기)
+<img src="https://user-images.githubusercontent.com/44868847/51252209-95501b80-19de-11e9-8b40-8da7463d246d.PNG" width="60%">
+<img src="https://user-images.githubusercontent.com/44868847/51252211-997c3900-19de-11e9-872a-356df307503f.PNG" width="60%">
 
 ## whatis
 - 프로그램에 대한 간단한 설명 제공
 
 ### 사용 예
-- (나중에 사용해 보며 첨부해 놓기)
+<img src="https://user-images.githubusercontent.com/44868847/51252213-9b45fc80-19de-11e9-9f11-ad46f0170779.PNG" width="60%">
 
 ## alias
 - 명령의 별칭 생성
@@ -150,3 +146,4 @@
 ## exit
 - 터미널 종료
 - 'logout'도 사용 가능
+
