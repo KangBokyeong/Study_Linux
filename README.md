@@ -1,4 +1,8 @@
 # Study Linux
+
+## 리눅스 학습 사이트
+- [Linux Journey](https://linuxjourney.com/)
+
 ## Linux Journey 단계 별 학습
 ### [Grasshoper](https://github.com/KangBokyeong/Study_Linux/tree/master/Grasshoper)
 - [Command Line](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%201%5D%20Command%20Line.md)
@@ -27,8 +31,6 @@
 - Troubleshooting
 - DNS
 
-## 리눅스 학습 사이트
-- [Linux Journey](https://linuxjourney.com/)
 ### 참고 사이트
 #### [[Linux Journey 1] Command Line](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%201%5D%20Command%20Line.md)
 - [file](https://korbillgates.tistory.com/161)
