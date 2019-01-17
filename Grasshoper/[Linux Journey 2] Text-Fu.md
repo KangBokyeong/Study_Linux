@@ -9,8 +9,6 @@
 |echo Hello World **>** peanuts.txt |peanuts라는 텍스트 파일을 만들어 Hello World 입력|
 |echo Hello World **>>** peanuts.txt |peanuts라는 텍스트 파일에 Hello World 입력(파일이 이미 존재 할 때)|
 
-### 사용 예
-- (나중에 사용해 보며 첨부해 놓기)
 
 ## stdin(Standerd In)
 - 공부중...
@@ -20,6 +18,10 @@
 ## stderr(Standerd Error)
 ### 사용 예
 - (나중에 사용해 보며 첨부해 놓기)
+
+
+## stdput, stderr 
+- [표준출력(STDOUT), 표준에러(STDERR)](https://sarc.io/index.php/forum/tips/551-linux-stdout-stderr-dev-null)
 
 ## pipe and tree
 ### 사용 예
