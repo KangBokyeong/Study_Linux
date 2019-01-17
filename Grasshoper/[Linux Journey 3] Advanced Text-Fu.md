@@ -1,15 +1,14 @@
-
-Advanced Text-Fu
-1. regex (Regular Expressions)
-2. Text Editors
-3. Vim (Vi Improved)
-4. Vim Search Patterns
-5. Vim Navigation
-6. Vim Appending Text
-7. Vim Editing
-8. Vim Saving and Exiting
-9. Emacs
-10. Emacs Manipulate Files
-11. Emacs Buffer Navigation
-12. Emacs Editing
-13. Emacs Exiting and Help
+# [Linux Journey 3] Advanced Text-Fu
+## regex (Regular Expressions)
+## Text Editors
+## Vim (Vi Improved)
+## Vim Search Patterns
+## Vim Navigation
+## Vim Appending Text
+## Vim Editing
+## Vim Saving and Exiting
+## Emacs
+## Emacs Manipulate Files
+## Emacs Buffer Navigation
+## Emacs Editing
+## Emacs Exiting and Help
