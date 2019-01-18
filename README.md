@@ -11,7 +11,7 @@
 ### [Grasshoper](https://github.com/KangBokyeong/Study_Linux/tree/master/Grasshoper)
 - [Command Line](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%201%5D%20Command%20Line.md)
 - [Text-Fu](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%202%5D%20Text-Fu.md)
-- Advanced Text-Fu
+- [Advanced Text-Fu](https://github.com/KangBokyeong/Study_Linux/edit/master/Grasshoper/%5BLinux%20Journey%203%5D%20Advanced%20Text-Fu.md)
 - User Management
 - Permissions
 - Processes
