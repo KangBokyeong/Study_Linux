@@ -13,7 +13,7 @@
 - [Text-Fu](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%202%5D%20Text-Fu.md)
 - [Advanced Text-Fu](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%203%5D%20Advanced%20Text-Fu.md)
 - [User Management](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%204%5D%20User%20Management.md)
-- [Permissions]()
+- [Permissions](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%205%5D%20Permissions.md)
 - Processes
 - Packages
 
@@ -41,5 +41,5 @@
 - [cat](http://www.incodom.kr/Linux/%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%B9%EC%96%B4/cat)
 #### [[Linux Journey 2] Text-Fu](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%202%5D%20Text-Fu.md)
 - [stdout, stderr](https://sarc.io/index.php/forum/tips/551-linux-stdout-stderr-dev-null)
-#### [[Linux Journey 5] Permissions]()
+#### [[Linux Journey 5] Permissions](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%205%5D%20Permissions.md)
 - [Process Permissions]()
