@@ -109,12 +109,12 @@
 - 비밀 번호 변경을 하고 싶으면? 
   - -> passwd 명령 사용하기
 - 암호 명령은 무엇을 하고 있는지? 가장 중요한 것은 / etc / shadow 파일을 수정하는 것!
-  > ls -l /etc/shadow
-  > -rw-r----- 1 root shadow 1134 Dec 1 11:45 /etc/shadow
+  > ls -l /etc/shadow  
+  > -rw-r----- 1 root shadow 1134 Dec 1 11:45 /etc/shadow  
   - 이 파일이 root가 소유하고 있는지? 소유한 파일을 어떻게 수정할 수 있는지?
 - 다른 권한 세트 살펴 보기
-  > ls -l /usr/bin/passwd
-  > -rwsr-xr-x 1 root root 47032 Dec 1 11:45 /usr/bin/passwd
+  > ls -l /usr/bin/passwd  
+  > -rwsr-xr-x 1 root root 47032 Dec 1 11:45 /usr/bin/passwd  
   - 자세히 보면 **s** 라는 문자가 새로 생긴 것을 볼 수 있음.
   - 이 권한 비트는 SUID임.
   - 파일이 SUID로 설정되어 있으면, 프로그램을 실행 한 사용자가 실행 권한뿐만 아니라 파일 소유자의 사용 권한도 얻을 수 있음.(이 경우, root)
@@ -143,7 +143,7 @@
 
 ### Modifying SGID(SGID 수정)
 - SGID의 숫자 표현 -> 2
-  > sudo chmod g+s myfile
+  > sudo chmod g+s myfile  
   > sudo chmod 2555 myfile
 
 ## Process Permissions(프로세스 권한)
@@ -161,5 +161,5 @@
 
 ### Modify sticky bit(고정 비트 수정)
 - 고정 비트에 대한 숫자 표현 -> 1
-  > sudo chmod +t mydir
+  > sudo chmod +t mydir  
   > sudo chmod 1755 mydir
