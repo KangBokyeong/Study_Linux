@@ -14,7 +14,7 @@
 - [Advanced Text-Fu](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%203%5D%20Advanced%20Text-Fu.md)
 - [User Management](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%204%5D%20User%20Management.md)
 - [Permissions](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%205%5D%20Permissions.md)
-- Processes
+- [Processes](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%206%5D%20Processes.md)
 - Packages
 
 ### [Journeyman](https://github.com/KangBokyeong/Study_Linux/tree/master/Journeyman)
