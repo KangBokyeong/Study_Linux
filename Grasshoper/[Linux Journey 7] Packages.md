@@ -118,27 +118,28 @@
 
 ## Compile Source Code
 1. 소스 코드를 컴파일 할 수있는 도구를 설치하는 소프트웨어가 있어야함.
-  > sudo apt install build-essential
+    > sudo apt install build-essential
 2. 패키지 파일의 내용 (대부분 .tar.gz 파일) 추출
-  > tar -xzvf package.tar.gz
+    > tar -xzvf package.tar.gz
 - 어떤 일을하기 전에 패키지 안의 README 나 INSTALL 파일을 살펴보기.(특정 설치 지침이있는 경우도 있음.)
 
 3. 시스템의 의존성을 검사(패키지 내용 -> configure 스크립트)
-  > ./configure
-  - ./는 현재 디렉토리에 스크립트 실행 가능함을 보여줌
+    > ./configure
+      - ./는 현재 디렉토리에 스크립트 실행 가능함을 보여줌
  
 4. 파일보고 소프트웨어 빌드 
-  > make
   - 기본 명령어
+    > make
   
-  > sudo make install
   - 실제로 패키지를 설치하고 올바른 파일을 컴퓨터의 올바른 위치에 복사
+    > sudo make install
   
-  > sudo make uninstall
   - 패키지 제거
-
-- 실제로 백그라운드에서 얼마나 진행되는지 알지 못할 수도 있음 
+    > sudo make uninstall  
+  
+  - 실제로 백그라운드에서 얼마나 진행되는지 알지 못할 수도 있음 
 
 5. make install이 아닌 용이한 명령
-  > sudo checkinstall
   - 쉽게 설치 및 제거 할 수 있는 .deb 파일 생성.
+    > sudo checkinstall
+  
