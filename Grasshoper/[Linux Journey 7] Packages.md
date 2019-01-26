@@ -1,16 +1,16 @@
 # [Linux Journey 7] Packages
-## Software Distribution
+## 1. Software Distribution
 - 업스트림 공급자: 코드 컴파일, 설치 방법 기록
 - 패키지 유지 관리자: 소프트웨어를 사용자에게 제공하도록 처리
 - 패키지 유지 보수자: 패키지 형태로이 소프트웨어를 검토, 관리 및 배포
 > 업스트림 공급자 -- [패키지] --> 패키지 유지 관리자 -- [소프트웨어] --> 사용자
 
-## Package Repositories
+## 2. Package Repositories
 - 배포판에는 이미 패키지를 가져올 수 있도록 사전 승인된 출처가 있음.
 - 시스템에 표시되는 모든 기본 패키지가 설치됨.
 - 데비안 시스템에서이 소스 파일: /etc/apt/sources.list 파일
 
-## tar and gzip
+## 3. tar and gzip
 ### gzip으로 파일 압축하기
 - Linux에서 파일을 압축하는데 사용되는 프로그램.
 - .gz 확장자로 끝남.
@@ -47,13 +47,13 @@
 - bzip2, 압축, 압축, 압축 해제 등과 같은 다른 압축 및 압축 유형이 있음. 
 - 이들은 다소 일반적인 것은 아니지만 여러 유틸리티가 서로 다른 명령을 요구한다는 점을 명심.
 
-## Package Dependencies
+## 4. Package Dependencies
 - 패키지를 실행하는데 필요한 의존성이 가장 빈번하게 발생
 - Linux에서 이러한 종속성은 종종 다른 패키지 또는 공유 라이브러리임.
   - 공유 라이브러리: 다른 프로그램에서 사용하고 스스로 다시 작성하지 않으려는 코드 라이브러리
 - 의존성이 없다면 패키지는 깨진 상태로 끝날 것임.
   
-## rpm and dpkg
+## 5. rpm and dpkg
 
 ### 패키지 설치
 - Debian 
@@ -83,7 +83,7 @@
   - q: 쿼리에 대한
   - a: 모든 것
 
-## yum and apt
+## 6. yum and apt
 - 관리 시스템
 
 ### 저장소에서 패키지 설치
@@ -116,7 +116,7 @@
 - RPM
   > yum info package_name
 
-## Compile Source Code
+## 7. Compile Source Code
 1. 소스 코드를 컴파일 할 수있는 도구를 설치하는 소프트웨어가 있어야함.
     > sudo apt install build-essential
 2. 패키지 파일의 내용 (대부분 .tar.gz 파일) 추출
