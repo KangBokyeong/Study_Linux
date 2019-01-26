@@ -1,5 +1,5 @@
 # [Linux Journey 5] Permissions
-## File Permissions
+## 1. File Permissions
 - 다른 사용 권한이나 파일 모드가 있음.
   - 예시
     > $ ls -l Desktop/  
@@ -26,7 +26,7 @@
   - 그룹인 penguins: 읽기 및 실행만 권한을 갖고 있음을 알 수 있음.
   - 제 3자인 다른 모든 사용자: 일기 및 실행 권한을 갖고 있음을 알 수 있음.
 
-## Modifying Permissions
+## 2. Modifying Permissions
 - chmod 명령어를 사용하여 권한 변경
 - 더하기 기호(+) 및 빼기 기호(-)를 사용해 추가하거나 제거 가능
 
@@ -73,7 +73,7 @@
     |5|4 + 1|O|X|O|다른 모든 사용자|
 
 
-## Ownership Permissions
+## 3. Ownership Permissions
 
 ### Modify user ownership
 - 사용자 소유권 수정
@@ -96,7 +96,7 @@
 |:-----:|:-----:|
 | sudo chown patty:whales myfile | 뒤에 콜론과 그룹 이름을 추가하여 사용자와 그룹을 동시 설정 |
 
-## Umask
+## 4. Umask
 - 기본 권한 세트 변경시 사용
 - 숫자 형식을 사용하는 권한에서 볼 수 있는 3비트 권한 세트 사용
 
@@ -104,7 +104,7 @@
 |:-----:|:-----:|
 | umask 021 | "(새 파일의 기본 권한이) 사용자 -> 모든 것에 액세스하기 / 그룹 -> 쓰기 권한을 없애기 / 다른 사용자 -> 실행 권한 없애기" |
 
-## Setuid
+## 5. Setuid
 - 사용자가 자신이 아닌 프로그램 파일의 소유자로서 프로그램을 실행 가능할 수 있도록 해줌.
 - 비밀 번호 변경을 하고 싶으면? 
   - -> passwd 명령 사용하기
@@ -134,7 +134,7 @@
   - SUID는 4로 표시되고 권한 집합에 선행. 
   - SUID가 대문자 S 로 표시되는 것을 볼 수 있음. 이는 SUID가 여전히 똑같지만 실행 권한이 없음을 의미함.
 
-## Setgid
+## 6. Setgid
 - 프로그램이 해당 그룹의 구성원인 것처럼 실행 가능
 - 예시
   > ls -l /usr/bin/wall
@@ -146,11 +146,11 @@
   > sudo chmod g+s myfile  
   > sudo chmod 2555 myfile
 
-## Process Permissions(프로세스 권한)
+## 7. Process Permissions(프로세스 권한)
 - 이 부분에 관해서는 "[윈도우의 계정과 권한 체계](https://m.blog.naver.com/PostView.nhn?blogId=scvpark&logNo=70163718517&proxyReferer=https%3A%2F%2Fwww.google.com%2F)" 이 사이트 참고!!
 
 
-## The Sticky Bit
+## 8. The Sticky Bit
 - 소유자 또는 루트 사용자만 파일을 삭제하거나 수정할 수 있음을 의미함.
 - 예시
   > ls -ld /tmp
