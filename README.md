@@ -15,7 +15,7 @@
 - [User Management](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%204%5D%20User%20Management.md)
 - [Permissions](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%205%5D%20Permissions.md)
 - [Processes](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%206%5D%20Processes.md)
-- Packages
+- [Packages](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%207%5D%20Packages.md)
 
 ### [Journeyman](https://github.com/KangBokyeong/Study_Linux/tree/master/Journeyman)
 - Devices
