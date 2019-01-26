@@ -1,5 +1,5 @@
 # [Linux Journey 3] Advanced Text-Fu
-## regex (Regular Expressions)
+## 1. regex (Regular Expressions)
 - 패턴 기반 선택을 수행하는 강력한 도구
 - 특수 표기법 사용
 - ^로 라인 시작
@@ -10,22 +10,22 @@
   - 범위를 사용하여 사용하려는 문자의 양 늘릴 수 있음.
   - 주의: 대소문자를 구분함.
   
-## Text Editors
+## 2. Text Editors
 - Vim과 emacs는 대부분의 Linux 배포판에 기본적으로 설치되는 인기있는 텍스트 편집기
 - ninja처럼 시스템을 돌아 다니고 싶다면이 텍스트 편집기 중 하나를 선택하여 사용해야 함.
 
-## Vim (Vi Improved)
+## 3. Vim (Vi Improved)
 - vi 텍스트 편집기 명령의 향상된 버전을 나타내는 이름과 마찬가지로 vi (Improved)의 약자.
 - 임의의 Linux 배포판을 부팅한 경우 vim 이 기본적으로 설치됨.
 
-## Vim Search Patterns
+## 4. Vim Search Patterns
 - / : / 뒤에 검색 결과 입력 후 Enter를 누름.
   - 검색 결과에서 "n"을 누르면 앞으로 이동
   - 검색 결과에서 "N"을 누르면 뒤로 이동
 - ? : 탐색 명령어
   -  택스트 파일을 거꾸로 검색
 
-## Vim Navigation
+## 5. Vim Navigation
 - 여기서는 마우스를 사용할 수 없음. 
 - 그래서 아래의 조작키를 이용해야 함.(명령 모드)
 
@@ -36,7 +36,7 @@
 |j 또는 아래쪽 방향키|아래쪽으로 한 줄 이동|
 |l 또는 오른쪽 방향키|오른쪽으로 한 글자 이동|
 
-## Vim Appending Text
+## 6. Vim Appending Text
 - 텍스트 삽입을 위한 삽입 모드
 
 |명령어|기능|
@@ -49,7 +49,7 @@
 
 - 삽입 모드 종료 시 Esc 키를 눌러주기
 
-## Vim Editing
+## 7. Vim Editing
 - 편집 및 일부 크래프트 제거
 
 |조작키|기능|
@@ -60,7 +60,7 @@
 |yy|현재 줄을 채우거나 복사|
 |p|복사 한 텍스트를 커서 앞에 붙여 넣기|
 
-## Vim Saving and Exiting
+## 8. Vim Saving and Exiting
 - 저장 및 종료
 
 |조작키|기능|
@@ -73,14 +73,14 @@
 |u|마지막 작업 취소|
 |Ctrl-r|마지막 작업 다시 실행|
 
-## Emacs
+## 9. Emacs
 - 모든 코드 편집, 파일 조작 등을 모두 할 수 있음.
 - 로드 속도가 약간 느려지고 학습 곡선이 vim 보다는 약간 가파름.
 - 확장성이 뛰어남.
 - emacs의 버퍼: 텍스트가 있는 파일 => 파일을 열명 해당 파일의 내용을 저장하는데 버퍼가 사용됨.
 - 동시에 여러 개의 버퍼를 열어서 버퍼 간 쉽게 전환 가능.
  
-## Emacs Manipulate Files
+## 10. Emacs Manipulate Files
 ### 파일 저장
 - C는 Ctrl를 의미함.
 
@@ -101,7 +101,7 @@
 |:------:|:------:|
 |C-x C-f|파일 열기|
 
-## Emacs Buffer Navigation
+## 11. Emacs Buffer Navigation
 - 버퍼 (혹은 방문한 파일)를 이동하기 위해 아래 명령어 사용.
 ### 스위치 버퍼
 
@@ -130,7 +130,7 @@
 |:------:|:------:|
 |C-x 1|단일 버퍼를 현재 화면으로 설정함.|
 
-## Emacs Editing
+## 12. Emacs Editing
 ### Text Navigation
 - 텍스트 탐색
 
@@ -152,7 +152,7 @@
 |C-y|붙여놓기|
 
 
-## Emacs Exiting and Help
+## 13. Emacs Exiting and Help
 ### 종료
 - 열려있는 버퍼가 존재하면, emacs가 닫히기 전에 저장하라는 메시지가 표시됨.
 
