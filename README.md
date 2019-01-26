@@ -36,10 +36,15 @@
 - DNS
 
 ### 참고 사이트(출처 제시)
-#### [[Linux Journey 1] Command Line](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%201%5D%20Command%20Line.md)
+#### [Grasshoper](https://github.com/KangBokyeong/Study_Linux/tree/master/Grasshoper)
+##### [[Linux Journey 1] Command Line](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%201%5D%20Command%20Line.md)
 - [file](https://korbillgates.tistory.com/161)
 - [cat](http://www.incodom.kr/Linux/%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%B9%EC%96%B4/cat)
-#### [[Linux Journey 2] Text-Fu](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%202%5D%20Text-Fu.md)
+##### [[Linux Journey 2] Text-Fu](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%202%5D%20Text-Fu.md)
 - [stdout, stderr](https://sarc.io/index.php/forum/tips/551-linux-stdout-stderr-dev-null)
-#### [[Linux Journey 5] Permissions](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%205%5D%20Permissions.md)
+##### [[Linux Journey 5] Permissions](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%205%5D%20Permissions.md)
 - [Process Permissions](https://m.blog.naver.com/PostView.nhn?blogId=scvpark&logNo=70163718517&proxyReferer=https%3A%2F%2Fwww.google.com%2F)
+
+#### [Journeyman](https://github.com/KangBokyeong/Study_Linux/tree/master/Journeyman)
+#### [Networking Nomad](https://github.com/KangBokyeong/Study_Linux/tree/master/Networking%20Nomad)
+
