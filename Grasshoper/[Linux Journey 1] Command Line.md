@@ -1,10 +1,10 @@
 # [Linux Journey 1] Command Line
-## pwd(print working directory)
+## 1. pwd(print working directory)
 - 현재 어떤 디렉토리에 위치해 있는지 확인 시 사용
 ### 사용 예
 <img src="https://user-images.githubusercontent.com/44868847/51187824-054b9c80-1920-11e9-83fb-a42245765a73.PNG" width="60%">
 
-# cd(change directory)
+# 2. cd(change directory)
 - 디렉토리 변경 시 사용
 
 |명령어|기능|
@@ -16,7 +16,7 @@
 ### 사용 예
 <img src="https://user-images.githubusercontent.com/44868847/51187848-0f6d9b00-1920-11e9-800c-c2a06f80e219.PNG" width="60%">
 
-## ls(list directories)
+## 3. ls(list directories)
 - 현재 디렉토리의 리스트 확인(어떤 파일이 있는지 등)
 
 |명령어|기능|
@@ -29,19 +29,19 @@
 <img src="https://user-images.githubusercontent.com/44868847/51187851-11375e80-1920-11e9-9bba-f1c5784ace37.PNG" width="60%">
 <img src="https://user-images.githubusercontent.com/44868847/51187854-12688b80-1920-11e9-8818-da3013d1e09a.PNG" width="60%">
 
-## touch
+## 4. touch
 - 빈 파일 생성 시 사용
 ### 사용 예
 <img src="https://user-images.githubusercontent.com/44868847/51187857-1399b880-1920-11e9-9a9b-c01ac45b22a3.PNG" width="60%">
 
 
-## file
+## 5. file
 - [자세한 사용법 및 정의는 여기서](https://korbillgates.tistory.com/161)
 
-## cat
+## 6. cat
 - [여기 자세한 사용법 및 정의가 잘 나와 있음.](http://www.incodom.kr/Linux/%EA%B8%B0%EB%B3%B8%EB%AA%85%EB%A0%B9%EC%96%B4/cat)
 
-## less
+## 7. less
 - 파일 안을 볼 수 있음.
 
 |명령어|기능|
@@ -53,11 +53,11 @@
 |/search|텍스트 문서에서 특정 텍스트 검색 가능.검색할 단어 앞에 '/'사용.|
 |h|도움이 필요할 때 사용|
 
-## history
+## 8. history
 - 이전에 했던 기록 살펴 보기
 - 'clear'를 사용해 터미널에 있는 기록 삭제
 
-## cp(copy)
+## 9. cp(copy)
 - 파일이나, 디렉토리 복사
 
 |명령어|기능|
@@ -68,7 +68,7 @@
 | cp -r |디렉토리 복사, 디렉토리 안에 있는 디렉토리들과 파일을 복사|
 | cp -i |덮어쓰기, i(: interactive)|
 
-## mv(move)
+## 10. mv(move)
 - 파일명, 디렉토리명 바꾸기
 - 파일 다른 곳에 옮기기(하나 이상도 가능)
 
@@ -78,7 +78,7 @@
 | mv -i |cp와 마찬가지로 덮어 쓸 때 사용|
 | mv -b |이전의 이름으로 백업|
 
-## mkdir(make directory)
+## 11. mkdir(make directory)
 - 현재 존재하지 않는 디렉토리 생성
 - 한 번에 여러 개의 디렉토리 생성 가능 
 
@@ -90,7 +90,7 @@
 ### 사용 예
 <img src="https://user-images.githubusercontent.com/44868847/51252187-88332c80-19de-11e9-9b45-90a21dc8aa8b.PNG" width="60%">
 
-## rm(remove)
+## 12. rm(remove)
 - 파일이나 디렉토리 삭제
 
 |명령어|기능|
@@ -103,7 +103,7 @@
 ### 사용 예
 <img src="https://user-images.githubusercontent.com/44868847/51252183-85d0d280-19de-11e9-8a05-7e31120e209d.PNG" width="60%">
 
-## find
+## 13. find
 - 파일, 디렉토리 등 검색
 - 검색 할 디렉토리, 검색 할 디렉토리를 지정 필수
 - 찾으려는 파일 유형 지정 가능(아래 명령어 입력하여)
@@ -117,33 +117,33 @@
 ### 사용 예
 <img src="https://user-images.githubusercontent.com/44868847/51252190-89645980-19de-11e9-8fca-851cccaea26f.PNG" width="60%">
 
-## help
+## 14. help
 - 도움말 출력
 
 ### 사용 예
 <img src="https://user-images.githubusercontent.com/44868847/51252201-9123fe00-19de-11e9-838d-8d39564fcf1a.PNG" width="60%">
 <img src="https://user-images.githubusercontent.com/44868847/51252203-92edc180-19de-11e9-9736-566d7069d9f2.PNG" width="60%">
 
-## man
+## 15. man
 - 메뉴얼 출력
 
 ### 사용 예
 <img src="https://user-images.githubusercontent.com/44868847/51252209-95501b80-19de-11e9-8b40-8da7463d246d.PNG" width="60%">
 <img src="https://user-images.githubusercontent.com/44868847/51252211-997c3900-19de-11e9-872a-356df307503f.PNG" width="60%">
 
-## whatis
+## 16. whatis
 - 프로그램에 대한 간단한 설명 제공
 
 ### 사용 예
 <img src="https://user-images.githubusercontent.com/44868847/51252213-9b45fc80-19de-11e9-9f11-ad46f0170779.PNG" width="60%">
 
-## alias
+## 17. alias
 - 명령의 별칭 생성
 - 별칭 이름을 지정 후 명령에 설정
 - 반대로 unalias를 이용하면 별칭이 사라짐.
 - 직접 사용해 보기!! 
 
-## exit
+## 18. exit
 - 터미널 종료
 - 'logout'도 사용 가능
 
