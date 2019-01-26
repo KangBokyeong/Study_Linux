@@ -1,4 +1,4 @@
-[Journey Linux 2] The Filesystem
+[Linux Journey 2] The Filesystem
 ## 1. Filesystem Hierarchy
 ## 2. Filesystem Types
 ## 3. Anatomy of a Disk
