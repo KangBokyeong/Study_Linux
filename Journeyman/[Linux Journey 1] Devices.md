@@ -1,9 +1,136 @@
 # [Linux Journey 1] Devices
 ## 1. /dev directory
-## 2. device types
-## 3. Device Names
-## 4. sysfs
-## 5. udev
-## 6. lsusb, lspci, lssci
-## 7. dd  
+- 일반 파일처럼 보이는 특수 파일
+- 일반 파일과 같기 때문에 ls, cat 등의 프로그램을 사용하여 상호 작용 가능
+- 예시
+  > ls /dev
+  - / dev / null에 출력을 보낼 때, 커널은이 장치가 모든 입력을 받아 버리고 그 값을 버리면 아무것도 반환되지 않는다는 것을 알게 됨.
 
+## 2. device types
+Before we chat about how devices are managed, let's actually take a look at some devices.
+
+- 예시
+  > ls -l /dev
+  
+    |권한/소유자/그룹| 주요 장치 번호|보조 장치 번호|타임 스탬프|장치 이름|
+    |:-----:|:-----:|:-----:|:-----:|:-----:|
+    |brw-rw----   1 root disk  |   8,|   0 | Dec 20 20:13 | sda |
+    |crw-rw-rw-   1  root root |   1,  | 3 | Dec 20 20:13 | null |
+    |srw-rw-rw-   1 root root   |    | 0 | Dec 20 20:13 | log |
+    |prw-r--r--   1 root root    |   | 0 | Dec 20 20:13 | fdata |
+    
+    - c: 문자
+    - b: 블록
+    - p: 파이프
+    - s: 소켓
+    
+### 문자 장치
+- 데이터를 전송하지만 한 번에 한 문자씩 전송
+- 문자 디바이스로 많은 의사 디바이스 (/ dev / null)를 볼 수 있음.
+- 디바이스는 실제 물리적으로 머신에 연결되어 있지는 않지만 운영 체제가 더 많은 기능을 제공.
+
+### 장치 차단
+- 데이터를 전송하지만 고정 크기의 대형 블록으로 전송
+- 데이터 블록을 하드 드라이브, 파일 시스템 등과 같은 블록 장치로 활용하는 장치를 볼 수 있음.
+
+### 파이프 장치
+- 파이프는 두 개 이상의 프로세스가 서로 통신 가능
+- 문자 장치와 유사하지만 출력을 장치로 보내지 않고 다른 프로세스로 보냄.
+
+### 소켓 장치
+- 파이프 장치와 마찬가지로 프로세스 간 통신을 용이하게하지만 동시에 여러 프로세스와 통신 가능.
+
+### 장치 특성화
+- 장치는 두 개의 숫자, 주요 장치 번호 및 보조 장치 번호를 사용하여 특성화됨.
+- 위의 예시에서 숫자를 볼 수 있으며 쉼표로 구분됨.
+
+## 3. Device Names
+### SCSI 장치
+- 컴퓨터에 대용량 저장소가있는 경우 SCSI ( "scuzzy"발음) 프로토콜을 사용할 가능성이 있음
+- Small Computer System Interface (소형 컴퓨터 시스템 인터페이스)의 약자.
+- 디스크, 프린터, 스캐너 및 기타 주변 장치를 시스템에 연결할 때 사용하는 프로토콜.
+- Linux 시스템은 SCSI 디스크와 / dev에있는 하드 디스크 드라이브를 의미
+- 접두어는 sd (SCSI 디스크)로 표시
+
+- 공통 SCSI 장치 파일
+  - /dev/sda: 첫 전째 하드 디스크
+  - /dev/sdb: 두 번째 하드 디스크
+  - /dev/sda3: 첫 번째 하드 디스크의 세 번째 파티션
+ 
+### 가짜 장치 
+- 가장 일반적인 유사 장치는 다음과 같은 문자 장치:
+
+  - /dev/zero: 모든 입력을 받아들이고 버리고 연속적인 NULL (zero value) 바이트 스트림 생성
+  - /dev/null: 모든 입력을 받아들이고 버리고 출력을 생성하지 않음.
+  - /dev/random: 난수 생성
+
+### PATA 장치
+- 오래된 시스템에서 hd 접두어로 하드 드라이브가 참조되는 경우
+  - /dev/hda: 첫 번째 하드 디스크
+  - /dev/hdd2: 네 번째 하드 디스크의 두 번째 파티션
+  
+## 4. sysfs
+- 시스템에서 / dev 디렉토리가 실패한 장치를보다 잘 관리하기 위해 만들어짐.
+- 대부분 / sys 디렉토리에 마운트됨.
+- / dev 디렉토리에서 볼 수있는 것보다 더 자세한 정보 제공
+- / sys 디렉토리와 / dev 디렉토리는 매우 비슷하게 보이고 일부는 그렇지만 중요한 차이점이 있음
+  - / dev 디렉토리는 간단하지만 다른 프로그램이 장치 자체에 액세스하는 것을 허용
+  -  / sys 파일 시스템은 정보를보고 장치를 관리하는데 사용
+- 기본적으로 제조업체 및 모델, 장치가 연결된 위치, 장치의 상태, 장치의 계층 구조 등과 같은 시스템의 모든 장치에 대한 모든 정보가 들어 있음
+- 예시 
+  > ls /sys/block/sda
+- 위 예시의디렉토리 내용
+  |alignment_offset|  discard_alignment  |holders |  removable  |sda6 |   trace|
+  |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+  |bdi     |          events |          inflight|  ro     |    size  |     uevent|
+  |capability |       events_async   |    power   |  sda1 |      slaves|
+  |dev  |             events_poll_msecs  |queue |    sda2    |   stat|
+  |device      |      ext_range       |   range   |  sda5    |   subsystem|
+
+## 5. udev
+- 장치 노드 / dev / sdb1을 만들 것이며, major number가 8이고 minor number가 3 인 블록 장치 (b)로 만듬.
+  > mknod /dev/sdb1 b 8 3
+
+- / dev 디렉토리에서 디바이스 파일을 rm하기만 하면 됨.
+
+- udev 시스템은 연결 여부에 따라 장치 파일을 동적으로 만들고 제거
+- 시스템에서 실행중인 udevd 데몬이 있고 시스템에 연결된 장치에 대한 커널의 메시지를 수신
+- 해당 정보를 구문 분석하고 데이터를 /etc/udev/rules.d에 지정된 규칙과 일치시킴.
+- 이 규칙에 따라 장치 노드와 심볼 링크 생성됨.
+- 자신 만의 udev 규칙을 작성 가능 하지만, udev 규칙이 많이 제공되므로 직접 작성하지 않아도됨.
+
+- udevadm 명령을 사용하여 udev 데이터베이스 및 sysfs를 볼 수도 있음.
+  > udevadm info --query=all --name=/dev/sda
+
+## 6. lsusb, lspci, lssci
+- ls 명령을 사용하여 파일과 디렉토리를 나열하는 것처럼 디바이스에 대한 정보를 나열하는 유사한 도구
+- USB 장치 나열
+  > lsusb 
+
+- PCI 장치 나열
+  > lspci 
+
+- SCSI 장치 나열
+  >lsscsi 
+
+## 7. dd  
+- 데이터 변환 및 복사에 매우 유용
+- 파일 또는 데이터 스트림에서 입력을 읽어 파일 또는 데이터 스트림에 사용.
+- 예시
+  > dd if=/home/pete/backup.img of=/dev/sdb bs=1024
+  - backup.img의 내용을 / dev / sdb에 복사
+  - 복사 할 데이터가 더 이상 없을 때까지 1024 바이트 블록으로 데이터를 복사
+  
+  - if = file: 입력 파일, 표준 입력 대신 파일에서 읽음
+  - of = file: 출력 파일, 표준 출력 대신 파일에 쓰기
+  - bs = bytes: 블럭 사이즈. 한 번에 많은 바이트의 데이터를 읽고 씀. 다른 크기 측정 기준을 사용하여 킬로바이트의 경우 kk, 메가 바이트의 경우 m 등으로 크기를 표시 할 수 있으므로 1024 바이트는 1k
+  - count = number - 복사 할 블록 수
+
+- count 옵션을 사용하는 dd 명령을 볼 수 있음.
+- 대개 dd를 사용하면 1MB의 파일을 복사하려는 경우 복사가 완료되면 보통 1MB로 표시
+- 예시
+  > dd if=/home/pete/backup.img of=/dev/sdb bs=1M count=2
+  - 우리의 backup.img 파일은 10M이지만이 명령에서 1M 이상을 2 회 복사하므로 2M 만 복사되므로 복사 된 데이터가 불완전합
+  - Count는 여러 상황에서 유용 할 수 있지만 데이터를 복사하는 경우 카운트와 카운트를 생략 가능
+
+- 전체 디스크 드라이브, 디스크 이미지 복원 등과 같은 모든 것을 백업하는데 사용 가능
