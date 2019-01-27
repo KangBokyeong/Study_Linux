@@ -18,7 +18,7 @@
 - [Packages](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%207%5D%20Packages.md)
 
 ### [Journeyman](https://github.com/KangBokyeong/Study_Linux/tree/master/Journeyman)
-- Devices
+- [Devices](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%201%5D%20Devices.md)
 - The Filesystem
 - Boot the System
 - Kernel
