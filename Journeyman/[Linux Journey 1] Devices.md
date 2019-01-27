@@ -7,8 +7,6 @@
   - / dev / null에 출력을 보낼 때, 커널은이 장치가 모든 입력을 받아 버리고 그 값을 버리면 아무것도 반환되지 않는다는 것을 알게 됨.
 
 ## 2. device types
-Before we chat about how devices are managed, let's actually take a look at some devices.
-
 - 예시
   > ls -l /dev
   
