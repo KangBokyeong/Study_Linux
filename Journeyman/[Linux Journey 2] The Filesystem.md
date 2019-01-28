@@ -218,13 +218,204 @@
   > sudo mount UUID=130b882f-7d79-436d-a096-1e594c92bb76 /mydrive
 
 ## 7. /etc/fstab
+- 시작할 때 파일 시스템을 자동으로 탑재하려면 파일 시스템 테이블에 대한 단락이 아닌 /etc/fstab("eff strack"으로 발음됨)에 파일을 추가
+- 마운트된 파일 시스템의 영구 목록이 포함되어 있음.
+- cat /etc/fstab 입력 시 아래 결과 출력됨.
+
+  > UUID=130b882f-7d79-436d-a096-1e594c92bb76 /               ext4    relatime,errors=remount-ro 0       1
+
+  > UUID=78d203a0-7c18-49bd-9e07-54f44cdb5726 /home           xfs     relatime        0       2
+
+  > UUID=22c3d34b-467e-467c-b44d-f03803c2c526 none            swap    sw              0       0
+
+  - 각각의 필드
+  
+    - UUID: 기기 식별자
+    - Mount point: 파일 시스템이 마운트되는 디렉토리
+    - Filesystem type: 파일 시스템
+    - Options: 기타 마운트 옵션
+    - Dump: 덤프 유틸리티가 백업을 수팽할 시기를 결정할 때 사용. 기본값은 0
+    - Pass: 검사할 파일시스템을 결정하기 위해 fsck에서 사용하고 값이 0이면 검사되지 않음.
+
+- 항목 추가 시, 위의 항목 구문을 사용하여 / etc / fstab 파일을 직접 수정
+- 파일 수정 시, 유의!!
 
 ## 8. swap
 
+|Number | Start |  End  |   Size  |  Type   |   File system  |   Flags|
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| 5 |     6861MB | 7380MB | 519MB |  logical |  linux-swap(v1) ||
+
+- 시스템에 가상 메모리를 할당하는데 사용됨.
+- 메모리가 부족하면 시스템은 이 파티션을 사용하여 유휴 프로세스 메모리를 디스크로 "스왑"하여 메모리가 낭비되지 않도록 함.
+
+### 스왑 공간을위한 파티션 사용
+- 스왑 공간으로 사용하기 위해 / dev / sdb2의 파티션 설정
+  - 1) 파티션에 아무것도 가지고 있지 않은지 확인
+  - 2) mkswap / dev / sdb2를 실행하여 스왑 영역 초기화
+  - 3) swapon / dev / sdb2를 실행하여 스왑 장치 활성화
+  - 4) 부팅 시 스왑 파티션을 계속 유지하려면 / etc / fstab 파일에 항목 추가. sw은 사용할 파일 시스템 유형
+  - 5) 스왑 제거 : swapoff / dev / sdb2
+
 ## 9. Disk Usage
+- 디스크 사용률을 확인하는 데 사용할 수 있는 몇 가지 도구
+- df -h 사용 시 아래 결과 출력 됨.
+
+  |Filesystem  |   1K-blocks  |  Used | Available | Use% | Mounted on |
+  |:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+  | /dev/sda1 |  6.2G | 2.3G | 3.6G | 40% | / |
+
+  - df 명령: 현재 마운트 된 파일 시스템의 활용도를 보여줌.
+  - -h 플래그: 사람이 읽을 수있는 형식 제공
+  - 장치가 무엇인지, 사용된 용량과 사용 가능한 용량 확인 가능
+
+- 어떤 파일 또는 디렉터리가 이 공간을 차지하고 있는지 알고 싶다면 du 명령 사용
+
+  > du -h
+  
+  - 현재 디렉토리의 디스크 사용량을 보여줌
+  - du -h / 와 함께 루트 디렉토리를 들여다 볼 수 있음.
+  
+- 디스크 사용량 확인 시 du 명령 사용 권장.
 
 ## 10. Filesystem Repair
+- fsck(파일 시스템 검사) 명령은 파일 시스템의 일관성을 확인하는데 사용됨.
+- 디스크 부팅 시 디스크가 마운트 되기 전에 fsck가 실행 되어 모든 것이 정상적으로 작동하는지 확인
+- 디스크가 너무 나빠서 수동으로 해야할 경우도 있음.
+- 응급 복구 디스크나 마운트 하지 않고 파일 시스템에 액세스 할 수 있는 곳에서는 이 작업 수행 권장
+  
+  > sudo fsck /dev/sda
 
 ## 11. Inodes
+- 데이터베이스를 inode 테이블이라고함.
+
+### inode란 무엇입니까?
+- 테이블의 항목이며 모든 파일에 하나씩 있음.
+- 다음은 파일에 대한 모든 것을 설명하고 있음.
+  - File type: 일반 파일, 디렉토리, 문자 장치 등
+  - Owner: 소유자
+  - Group: 그룹
+  - Access permissions: 액세스 권한
+  - Timestamps: mtime (마지막 파일 수정 시간), ctime (마지막 속성 변경 시간), atime (마지막 액세스 시간)
+  - 파일에 대한 하드 링크 수
+  - 파일 크기
+  - 파일에 할당된 블록의 수
+  - 파일의 데이터 블록에 대한 포인터 -> 가장 중요함!!
+- 기본적으로 inode는 파일 이름과 파일 자체를 제외한 파일에 대한 모든 것 저장
+
+### inode는 언제 만들어 집니까?
+- 파일 시스템이 생성되면 inode를위한 공간도 할당됨.
+- 디스크 용량에 따라 필요한 inode 공간의 양을 결정하는 알고리즘이 있음.
+- 시스템에 남아있는 inode의 수를 보려면 df -i 명령 사용
+
+### inode 정보
+- 숫자로 식별되며 파일이 생성되면 inode 번호가 할당되고 번호는 순차적으로 할당됨.
+- 새 파일을 만들 때 다른 파일보다 낮은 inode 번호를 얻는 경우가 있음.
+  - 이는 inode가 삭제되면 다른 파일에서 다시 사용할 수 있기 때문
+- inode 번호를 보려면 ls -li 실행(명령 실행 시 아래와 같은 결과가 출력됨.)
+
+  > 140 drwxr-xr-x 2 pete pete 6 Jan 20 20:13 Desktop
+
+  > 141 drwxr-xr-x 2 pete pete 6 Jan 20 20:01 Documents
+
+  - 첫 번째 필드: inode 번호를 나열
+
+- stat를 사용하여 파일에 대한 자세한 정보를 볼 수 있으며 inode에 대한 정보 제공(명령 실행 시 아래와 같은 결과가 출력됨.)
+
+  > stat ~/Desktop/
+
+  > File: ‘/home/pete/Desktop/’
+
+  > Size: 6               Blocks: 0          IO Block: 4096   directory
+
+  > Device: 806h/2054d      Inode: 140         Links: 2
+
+  > Access: (0755/drwxr-xr-x)  Uid: ( 1000/   pete)   Gid: ( 1000/   pete)
+
+  > Access: 2016-01-20 20:13:50.647435982 -0800
+
+  > Modify: 2016-01-20 20:13:06.191675843 -0800
+
+  > Change: 2016-01-20 20:13:06.191675843 -0800
+
+  > Birth: -
+
 
 ## 12. symlinks
+- 앞서 사용한 예시를 다시 살펴보면(명령어는 ls -li)
+
+  > 140 drwxr-xr-x 2 pete pete 6 Jan 20 20:13 Desktop
+
+  > 141 drwxr-xr-x 2 pete pete 6 Jan 20 20:01 Documents
+  
+  - 세 번째 필드: 링크 수 (-> 파일에있는 총 하드 링크 수)
+  
+
+### Symlinks
+- 예시
+
+  > echo 'myfile' > myfile
+
+  > echo 'myfile2' > myfile2
+
+  > echo 'myfile3' > myfile3
+
+
+  > ln -s myfile myfilelink
+
+  > ~/Desktop$ ls -li
+
+  > total 12
+
+  > 151 -rw-rw-r-- 1 pete pete 7 Jan 21 21:36 myfile
+
+  > 93401 -rw-rw-r-- 1 pete pete 8 Jan 21 21:36 myfile2
+
+  > 93402 -rw-rw-r-- 1 pete pete 8 Jan 21 21:36 myfile3
+
+  > 93403 lrwxrwxrwx 1 pete pete 6 Jan 21 21:39 myfilelink -> myfile
+
+  - myfile을 가리키는 myfilelink라는 symlink를 만들었다는 것을 알 수 있음.
+  - symlink는 ->로 표시
+  - 어떻게 새로운 inode 번호를 얻었는지 주목하고 symlink는 단지 파일명을 가리키는 파일일 뿐임.
+  - symlink를 수정하면 파일도 수정됨.
+  - inode 번호는 파일 시스템에 고유 -> inode 번호로 다른 파일 시스템의 파일을 참조할 수 없다는 것을 의미
+  - symlinks를 사용하면 inode 번호는 사용하지 않고 filename을 사용하여 다른 파일 시스템에서 참조 가능
+  
+### Hardlinks
+- 예시
+ 
+  > ~/Desktop$ ln myfile2 myhardlink
+
+  > ~/Desktop$ ls -li
+
+  > total 16
+
+  > 151 -rw-rw-r-- 1 pete pete 7 Jan 21 21:36 myfile
+
+  > 93401 -rw-rw-r-- 2 pete pete 8 Jan 21 21:36 myfile2
+
+  > 93402 -rw-rw-r-- 1 pete pete 8 Jan 21 21:36 myfile3
+
+  > 93403 lrwxrwxrwx 1 pete pete 6 Jan 21 21:39 myfilelink -> myfile
+
+  > 93401 -rw-rw-r-- 2 pete pete 8 Jan 21 21:36 myhardlink
+
+  - 동일한 inode에 대한 링크가있는 다른 파일을 만듦.
+  - myfile2 또는 myhardlink의 내용을 수정하면 변경 내용이 두 파일에 모두 표시되지만 myfile2를 삭제해도 myhardlink를 통해 파일에 액세스 가능
+  - ls 명령의 링크 카운트가 작용하는 부분이 있음.
+  - 링크 수는 아이 노드에있는 하드 링크 수
+  - 파일을 제거하면 링크 수가 줄어듬.
+  - inode에 대한 모든 하드 링크가 삭제되면 inode 만 삭제됨.
+  - 파일을 만들 때 링크 수는 해당 inode를 가리키는 유일한 파일이므로 1
+  - symlink와 달리, inode가 파일 시스템에 고유하기 때문에 파일 시스템 확장 :x:
+
+### Creating a symlink
+- symlink 생성
+  > ln -s myfile mylink
+    - 기호 링크를 작성하려면 기호에 -s와 함께 ln 명령을 사용하고 대상 파일과 링크 이름 지정
+
+### Creating a hardlink
+- hardlink 생성
+  > ln somefile somelink
+    - symlink와 비슷하지만, -s가 생략 됨.
