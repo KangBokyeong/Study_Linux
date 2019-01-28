@@ -178,6 +178,44 @@
   - 기존 파일 시스템 위에 파일 시스템을 만들려고한다면 파일 시스템을 손상된 상태로 남겨 둘 가능성 높음.
 
 ## 6. mount and umount
+- 파일 시스템의 내용을보기 전에 마운트해야함.
+- 장치 위치, 파일 시스템 유형 및 마운트 지점이 필요함.
+- 마운트 지점은 파일 시스템이 연결될 시스템의 디렉토리
+
+### mkdir / mydrive 라는 마운트 지점 만들기
+  
+  > sudo mount -t ext4 /dev/sdb2 /mydrive
+    
+    - /mydrive로 이동하면 파일 시스템 컨텐츠를 볼 수 있음.
+    - -t ext4: 파일 시스템의 유형
+    - /dev/sdb2: 장치 위치 
+    - /mydrive: 마운트 지점
+    - 즉, 파일 시스템의 유형, 저장 위치 마운트 지점 순으로 지정해줌.
+  
+### 마운트 지점에서 장치를 마운트에서 해제 시
+  
+  > sudo umount /mydrive 
+  > or 
+  > sudo umount /dev/sdb2
+    
+    - 커널은 장치를 찾은 순서대로 장치 이름을 지정
+    - 이름 대신 장치의 보편적으로 고유 한 ID (UUID) 사용 가능
+
+### 블록 장치에 대한 시스템의 UUID 보기
+
+  - sudo blkid 명령어 시행 시 아래 와 같은 결과 출력
+
+    > /dev/sda1: UUID="130b882f-7d79-436d-a096-1e594c92bb76" TYPE="ext4" 
+    
+    > /dev/sda5: UUID="22c3d34b-467e-467c-b44d-f03803c2c526" TYPE="swap" 
+
+    > /dev/sda6: UUID="78d203a0-7c18-49bd-9e07-54f44cdb5726" TYPE="xfs" 
+    
+    - 장치 이름, 해당 파일 시스템 유형 및 해당 UUID를 볼 수 있음.
+
+### 무언가를 탑재하고 싶을 때
+  
+  > sudo mount UUID=130b882f-7d79-436d-a096-1e594c92bb76 /mydrive
 
 ## 7. /etc/fstab
 
