@@ -22,7 +22,7 @@
 - [The Filesystem](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%202%5D%20The%20Filesystem.md)
 - [Boot the System](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%203%5D%20Boot%20the%20System.md)
 - [Kernel](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%204%5D%20Kernel.md)
-- Init
+- [Init](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%205%5D%20Init.md)
 - Process Utilization
 - Logging
 
