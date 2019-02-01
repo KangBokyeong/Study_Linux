@@ -23,7 +23,7 @@
 - [Boot the System](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%203%5D%20Boot%20the%20System.md)
 - [Kernel](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%204%5D%20Kernel.md)
 - [Init](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%205%5D%20Init.md)
-- Process Utilization
+- [Process Utilization](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%206%5D%20Process%20Utilization.md)
 - Logging
 
 ### [Networking Nomad](https://github.com/KangBokyeong/Study_Linux/tree/master/Networking%20Nomad)
