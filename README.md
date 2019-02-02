@@ -24,7 +24,7 @@
 - [Kernel](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%204%5D%20Kernel.md)
 - [Init](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%205%5D%20Init.md)
 - [Process Utilization](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%206%5D%20Process%20Utilization.md)
-- Logging
+- [Logging](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%207%5D%20Logging.md)
 
 ### [Networking Nomad](https://github.com/KangBokyeong/Study_Linux/tree/master/Networking%20Nomad)
 - Network Sharing
