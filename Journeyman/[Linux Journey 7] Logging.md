@@ -76,4 +76,4 @@
 - logrotate를 사용하여 효율적인 디스크 공간 관리
 - logrotate 유틸리티는 로그 관리 수행
 - 로그에는 보존 할 로그의 수와 로그를 지정하여 공간을 절약하기 위해 로그를 압축하는 방법 등을 지정할 수있는 구성 파일이 있음.
--  logrotate 도구는 보통 cron을 하루에 한 번 실행하고 구성 파일은 /etc/logrotate.d에 있음.
+- logrotate 도구는 보통 cron을 하루에 한 번 실행하고 구성 파일은 /etc/logrotate.d에 있음.
