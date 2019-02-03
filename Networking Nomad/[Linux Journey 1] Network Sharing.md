@@ -12,10 +12,10 @@
   > scp -r mydir username@remotehost.com:/remote/directory
 
 ## 2. rsync
-Another tool used to copy data from different hosts is rsync (short for remote synchronization). Rsync is very similar to scp, but it does have a major difference. Rsync uses a special algorithm that checks in advanced if there is already data that you are copying to and will only copy over the differences. For example, let's say that you were copying over a file and your network got interrupted, therefore your copy stopped midway. Instead of re-copying everything from the beginning, rsync will only copy over the parts that didn't get copied.
-
-It also verifies the integrity of a file you are copying over with checksums. These small optimizations allow greater file transfer flexibility and makes rsync ideal for directory synchronization remotely and locally, data backups, large data transfers and more.
-
+- 복사하고 있는 데이터가 이미 있는 경우에 미리 체크하는 특별한 알고리즘 사용
+- 차이점 복사
+- 체크섬으로 복사하는 파일의 무결성을 확인
+- 작은 최적화로 파일 전송 유연성이 향상되고 원격 및 로컬 디렉터리 동기화, 데이터 백업, 대용량 데이터 전송 등에 rsync가 이상적임.
 - 일반적으로 사용되는 몇 가지 rsync 옵션
   - v(verbose output): 자세한 출력
   - r(recursive into directories) 디렉토리로 재귀적으로
