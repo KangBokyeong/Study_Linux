@@ -30,5 +30,22 @@
   > rsync username@remotehost.com:/remote/directory /local/directory
 
 ## 3. Simple HTTP Server
-## 4. NFS
+- Python에는 HTTP를 통해 파일을 제공하기위한 매우 유용한 도구가 있음.
+- 네트워크의 다른 컴퓨터에서 액세스 할 수 있는 빠른 네트워크 공유를 만들고자 할 때 유용
+- 실행 예시
+  > python -m SimpleHTTPServer
+    - 로컬 호스트 주소를 통해 액세스 할 수있는 기본 웹 서버가 설정됨.
+    - 이 머신을 실행 한 머신의 IP 주소를 가져온 다음 다른 머신에서 http : // IP_ADDRESS : 8000을 사용하여 브라우저에서 액세스 해보기
+    - 웹 브라우저에서 http : // localhost : 8000을 입력하여 사용 가능한 파일을 볼 수 있음.
+
+## 4. NFS(Network File System)
+- Linux에서 가장 표준적인 네트워크 파일 공유.
+- 이를 사용하면 서버가 네트워크를 통해 하나 이상의 클라이언트와 디렉토리 및 파일 공유 가능
+- NFS 클라이언트 설정 예시
+  > sudo service nfsclient start  
+  > sudo mount server:/directory /mount_directory  
+
+- Automounting
+  - 지정된 디렉토리에서 파일에 액세스하면 automount가 원격 서버를 검색하여 자동으로 마운트함.
+
 ## 5. Samba
