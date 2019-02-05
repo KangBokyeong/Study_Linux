@@ -49,3 +49,37 @@
   - 지정된 디렉토리에서 파일에 액세스하면 automount가 원격 서버를 검색하여 자동으로 마운트함.
 
 ## 5. Samba
+- Linux 유틸리티를 Linux에서 CIFS(Common Internet File System)와 함께 사용하는 것
+- 파일 공유 외에도 프린터와 같은 리소스 공유 가능
+
+### Samba와 네트워크 공유 만들기
+- Windows 컴퓨터에서 액세스 할 수있는 네트워크 공유를 만드는 기본 단계를 수행
+
+### Samba 설치
+> sudo apt update 
+> sudo apt install samba  
+
+### smb.conf 설정
+- Samba의 설정 파일은 /etc/samba/smb.conf에 있으며,이 파일은 공유해야 할 디렉토리, 액세스 권한 및 기타 옵션을 시스템에 알려 주어야 함.
+- 기본 smb.conf에는 주석 처리 된 코드가 이미 많이 포함되어 있으며 이를 사용자 자신의 구성을 작성하는 예제로 사용 가능
+- 명령 예시
+  >  sudo vi /etc/samba/smb.conf  
+  
+### Samba에 대한 암호 설정
+> sudo smbpasswd -a [username]  
+
+### 공유 디렉토리 만들기
+> mkdir /my/directory/to/share  
+
+### Samba 서비스 재시작
+> sudo service smbd restart 
+
+### Windows를 통해 Samba 공유에 액세스
+- Windows의 경우, 실행 프롬프트에서 네트워크 연결을 입력하십시오. \\ HOST \ sharename.
+
+### Linux를 통해 Samba / Windows 공유에 액세스
+> smbclient //HOST/directory -U user
+
+### 시스템에 Samba 공유 첨부
+- 파일을 하나씩 전송하는 대신 시스템에 네트워크 공유를 마운트 가능 
+  > sudo mount -t cifs servername:directory mountpount -o user=username, pass=password
