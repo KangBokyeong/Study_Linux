@@ -27,7 +27,7 @@
 - [Logging](https://github.com/KangBokyeong/Study_Linux/blob/master/Journeyman/%5BLinux%20Journey%207%5D%20Logging.md)
 
 ### [Networking Nomad](https://github.com/KangBokyeong/Study_Linux/tree/master/Networking%20Nomad)
-- Network Sharing
+- [Network Sharing](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%201%5D%20Network%20Sharing.md)
 - Network Basics
 - Subnetting
 - Routing
