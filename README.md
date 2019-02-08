@@ -30,7 +30,7 @@
 - [Network Sharing](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%201%5D%20Network%20Sharing.md)
 - [Network Basics](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%202%5D%20Network%20Basics.md)
 - [Subnetting](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%203%5D%20Subnetting.md)
-- Routing
+- [Routing](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%204%5D%20Routing.md)
 - Network config
 - Troubleshooting
 - DNS
