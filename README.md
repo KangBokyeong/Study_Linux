@@ -31,7 +31,7 @@
 - [Network Basics](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%202%5D%20Network%20Basics.md)
 - [Subnetting](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%203%5D%20Subnetting.md)
 - [Routing](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%204%5D%20Routing.md)
-- Network config
+- [Network config](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%205%5D%20Network%20Config.md)
 - Troubleshooting
 - DNS
 
