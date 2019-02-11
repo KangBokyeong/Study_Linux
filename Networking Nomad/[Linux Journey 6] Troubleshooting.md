@@ -59,4 +59,38 @@
     -  기본적으로 경로를 따라 3 개의 패킷을 보냄.
     
 ## 4. netstat
+### Well Known Ports
+- / etc / services 파일을 보고 잘 알려진 포트 목록 확인  
+![](https://user-images.githubusercontent.com/44868847/52542407-ab38dc80-2de2-11e9-874b-5f110c5dfd2f.PNG)
+  - 첫 번째 열은 서비스의 이름
+  - 포트 번호와 서비스가 사용하는 전송 계층 프로토콜
+
+### netstat
+- 네트워크에 대한 자세한 정보를 얻는 매우 유용한 도구.
+- 네트워크 연결, 라우팅 테이블, 네트워크 인터페이스에 관한 정보 등과 같은 다양한 네트워크 관련 정보를 표시
+- 소켓과 포트
+  - 소켓: 프로그램이 데이터를 보내고 받는 것을 허용하는 인터페이스
+  - 포트: 어떤 응용 프로그램이 데이터를 보내거나 받아야하는지 식별하는데 사용
+  - 소켓 주소는 IP 주소와 포트의 조합
+- 호스트와 대상 간의 모든 연결에는 고유 한 소켓이 필요함.
+  - 예: HTTP는 포트 80에서 실행되는 서비스, 많은 HTTP 연결을 가질 수 있으며 각 연결을 유지하기 위해 연결 당 소켓이 생성됨.
+  - netstat -at 명령 사용  
+  ![4-2](https://user-images.githubusercontent.com/44868847/52542408-ac6a0980-2de2-11e9-9de4-c784ef8d15c2.PNG)
+    - netstat -a 명령: 네트워크 연결에 대한 청취 소켓과 청취 소켓을 표시
+    - -t 플래그: tcp 연결만 표시
+    
+    - 열은 왼쪽에서 오른쪽으로 아래와 같음.
+      - Proto: 사용된 프로토콜, TCP 및 UDP.
+      - Recv-Q(Data that is queued to be received): 수신 대기중인 데이터
+      - Send-Q(Data that is queued to be sent): 전송 대기중인 데이터
+      - Local Address: 로컬로 연결된 호스트
+      - Foreign Address: 원격으로 연결된 호스트
+      - State: 소켓의 상태
+    - 소켓 상태 목록
+      - LISTENING: 소켓이 들어오는 연결을 듣고 있음. TCP 연결 시, 기다려야함을 기억.
+      - SYN_SENT: 소켓이 연결을 시도하고 있음.
+      - ESTABLISHED: 소켓에 연결이 설정되어 있음.
+      - CLOSE_WAIT: 원격 호스트가 종료되었고 소켓이 닫힐 때까지 기다리고 있음.
+      - TIME_WAIT: 네트워크에서 패킷을 처리하기 위해 소켓을 닫은 후에 대기 중
+      
 ## 5. Packet Analysis
