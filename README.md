@@ -33,7 +33,7 @@
 - [Routing](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%204%5D%20Routing.md)
 - [Network config](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%205%5D%20Network%20Config.md)
 - [Troubleshooting](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%206%5D%20Troubleshooting.md)
-- DNS
+- [DNS](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%207%5D%20DNS.md)
 
 ### 참고 사이트(출처 제시)
 #### [Grasshoper](https://github.com/KangBokyeong/Study_Linux/tree/master/Grasshoper)
