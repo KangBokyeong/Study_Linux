@@ -94,3 +94,27 @@
       - TIME_WAIT: 네트워크에서 패킷을 처리하기 위해 소켓을 닫은 후에 대기 중
       
 ## 5. Packet Analysis
+The subject of packet analysis could fill an entire course of its own and there are many books written just on packet analysis. However, today we will just learn the basics. There are two extremely popular packet analyzers, Wireshark and tcpdump. These tools scan your network interfaces, capture the packet activity, parse the packages and output the information for us to see. They allows us to get into the nitty gritty of network analysis and get into the low level stuff. We'll be using tcpdump since it has a simpler interface, however if you were to pick up packet analysis for your toolbelt, I would recommend looking into Wireshark.
+
+### tcpdump 설치  
+> sudo apt install tcpdump
+
+### 인터페이스에서 패킷 데이터 캡처
+- sudo tcpdump -i wlan0 명령 사용
+  ![5-1](https://user-images.githubusercontent.com/44868847/52542701-e7ba0780-2de5-11e9-9556-57d10dce59e9.PNG)  
+  - 패킷 캡처를 실행할 때 많은 일들이 일어나는 것을 보게 될 것임.
+  - 백그라운드에서 많은 네트워크 활동이 일어날 것으로 예상됨.
+  - www.google.com을 핑 (ping)하기로 결정한 시간에만 캡처한 내용을 촬영
+
+### 출력물에 대한 이해
+![5-2](https://user-images.githubusercontent.com/44868847/52542702-e7ba0780-2de5-11e9-86bd-8c0296d225f2.PNG)  
+  - 첫 변째 필드: 네트워크 활동의 타임 스탬프
+  - IP에는 프로토콜 정보가 들어 있음.
+  - 소스 및 대상 주소가 표시. (icebox.lan> nuq04s29-in-f4.1e100.net)
+  - seq: TCP 패킷의 시작 및 끝 시퀀스 번호.
+  - length: 바이트 단위의 길이
+- Google의 tcpdump 출력에서 볼 수 있듯이 www.google.com 으로 ICMP 에코 요청 패킷을 보내고 답례로 ICMP 에코 답장 패킷을 받고 있음.
+- 다른 패킷이 다른 정보를 출력하므로 manpage를 참조하여 그 정보 확인
+
+### tcpdump 출력을 파일에 쓰기
+> sudo tcpdump -w /some/file
