@@ -32,7 +32,7 @@
 - [Subnetting](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%203%5D%20Subnetting.md)
 - [Routing](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%204%5D%20Routing.md)
 - [Network config](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%205%5D%20Network%20Config.md)
-- Troubleshooting
+- [Troubleshooting](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%206%5D%20Troubleshooting.md)
 - DNS
 
 ### 참고 사이트(출처 제시)
