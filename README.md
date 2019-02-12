@@ -35,7 +35,7 @@
 - [Troubleshooting](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%206%5D%20Troubleshooting.md)
 - [DNS](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%207%5D%20DNS.md)
 
-### 참고 사이트(출처 제시)
+### 참고 사이트(접속하면 참고한 사이트가 뜸)
 #### [Grasshoper](https://github.com/KangBokyeong/Study_Linux/tree/master/Grasshoper)
 ##### [[Linux Journey 1] Command Line](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%201%5D%20Command%20Line.md)
 - [file](https://korbillgates.tistory.com/161)
@@ -44,7 +44,3 @@
 - [stdout, stderr](https://sarc.io/index.php/forum/tips/551-linux-stdout-stderr-dev-null)
 ##### [[Linux Journey 5] Permissions](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%205%5D%20Permissions.md)
 - [Process Permissions](https://m.blog.naver.com/PostView.nhn?blogId=scvpark&logNo=70163718517&proxyReferer=https%3A%2F%2Fwww.google.com%2F)
-
-#### [Journeyman](https://github.com/KangBokyeong/Study_Linux/tree/master/Journeyman)
-#### [Networking Nomad](https://github.com/KangBokyeong/Study_Linux/tree/master/Networking%20Nomad)
-
