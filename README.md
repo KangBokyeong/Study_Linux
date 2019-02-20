@@ -35,7 +35,7 @@
 - [Troubleshooting](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%206%5D%20Troubleshooting.md)
 - [DNS](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%207%5D%20DNS.md)
 
-### 참고 사이트 목록(접속하면 참고한 사이트가 뜸)
+### 참고 사이트 목록(접속 시 참고한 사이트가 뜸)
 #### [Grasshoper](https://github.com/KangBokyeong/Study_Linux/tree/master/Grasshoper)
 ##### [[Linux Journey 1] Command Line](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%201%5D%20Command%20Line.md)
 - [file](https://korbillgates.tistory.com/161)
