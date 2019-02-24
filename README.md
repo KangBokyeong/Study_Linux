@@ -1,13 +1,13 @@
 # Study Linux
 
-## 리눅스 학습 사이트
+## 1. 리눅스 학습 사이트
 - [Linux Journey](https://linuxjourney.com/)
 
-## 학습 참고서
+## 2. 학습 참고서
 - [칼리 리눅스 입문자를 위한 메타스플로잇 중심의 모의 침투 2/e](http://acornpub.co.kr/book/meatsploit-pentest-2e)
 - 학교 도서관에서 대여하고 공부중...([학교 도서 정보 현황](http://library.hallym.ac.kr/search/detail/CATTOT000079199623?mainLink=/search/tot&briefLink=/search/tot/result?os=DESC_A_q=%EC%B9%BC%EB%A6%AC+%EB%A6%AC%EB%88%85%EC%8A%A4_A_websysdiv=tot_A_st=FRNT_A_oi=DISP06_A_y=0_A_x=0_A_si=TOTAL))
 
-## Linux Journey 단계 별 학습
+## 3. Linux Journey 단계 별 학습
 ### [[1단계] Grasshoper](https://github.com/KangBokyeong/Study_Linux/tree/master/Grasshoper)
 - [Command Line](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%201%5D%20Command%20Line.md)
 - [Text-Fu](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%202%5D%20Text-Fu.md)
@@ -35,7 +35,7 @@
 - [Troubleshooting](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%206%5D%20Troubleshooting.md)
 - [DNS](https://github.com/KangBokyeong/Study_Linux/blob/master/Networking%20Nomad/%5BLinux%20Journey%207%5D%20DNS.md)
 
-### 참고 사이트 목록(접속 시 참고한 사이트가 뜸)
+### 4. 참고 사이트 목록(접속 시 참고한 사이트가 뜸)
 #### [Grasshoper](https://github.com/KangBokyeong/Study_Linux/tree/master/Grasshoper)
 ##### [[Linux Journey 1] Command Line](https://github.com/KangBokyeong/Study_Linux/blob/master/Grasshoper/%5BLinux%20Journey%201%5D%20Command%20Line.md)
 - [file](https://korbillgates.tistory.com/161)
